@@ -1,6 +1,9 @@
 
 var price = 1000;
 var screen = drive = memory = {"price" : 0};
+screen.screen = "11 Inches";
+memory.memory = "16GB";
+drive.hardDrive = "256GB";
 
 $(document).ready(function(){
 
@@ -20,6 +23,17 @@ $(document).ready(function(){
 		var p = $('input[name="memory"]:checked').val();
 		memory = jQuery.parseJSON(p);
 		updatePrice();
+	});
+
+	$('#saveQuote').click(function(){
+	//	$.getJSON("http://localhost:3000/saveQuery", function(data
+		var url = "http://localhost:3000/saveQuote?";
+		url += "price=" + price;
+		url += "&screen=" + screen.screen;
+		url += "&drive=" + drive.hardDrive;
+		url += "&memory=" + memory.memory;
+		alert(url);
+		//$.get(url);
 	});			
 
 });

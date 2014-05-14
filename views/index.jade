@@ -14,25 +14,27 @@ html
    br
    br
    h2 Screen Size
-   input(type='radio' name='screen' value='{"screen" : "11 Inches", "price" : 0}')
+   input(type='radio' name='screen' checked value='{"screen" : "11 Inches", "price" : 0}')
    span 11 Inches - Included
    br
    input(type='radio' name='screen' value='{"screen" : "15 Inches", "price" : 200}')
    span 15 Inches - $200
    br
    h2 Hard Drive Size
-   input(type='radio' name='drive' value='{"hardDrive" : "128GB", "price" : 0}')
+   input(type='radio' name='drive' checked value='{"hardDrive" : "128GB", "price" : 0}')
    span 128GB - Included
    br
    input(type='radio' name='drive' value='{"hardDrive" : "256GB", "price" : 200}')
    span 256GB - $200
    br
    h2 Memory Size
-   input(type='radio' name='memory' value='{"memory" : "8GB", "price" : 0}')
+   input(type='radio' name='memory' checked value='{"memory" : "8GB", "price" : 0}')
    span 8GB - Included
    br
    input(type='radio' name='memory' value='{"memory" : "16GB", "price" : 200}')
    span 16GB - $200
    br
-
-
+   br
+   button#saveQuote(type='button') Save Quote
+   br
+   button#viewQuote(type='button') View Quotes
