@@ -3,6 +3,7 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='lib/jquery.js')
     script(src='lib/myCode.js')
   body
    h1 IS373 Final Exam
@@ -13,18 +14,25 @@ html
    br
    br
    h2 Screen Size
-   input(type='radio' name='screen' value='{"screenSize" : "11 Inches", "price" : 0}')
+   input(type='radio' name='screen' value='{"screen" : "11 Inches", "price" : 0}')
    span 11 Inches - Included
    br
-   input(type='radio' name='screen' value='{"screenSize" : "15 Inches", "price" : 200}')
+   input(type='radio' name='screen' value='{"screen" : "15 Inches", "price" : 200}')
    span 15 Inches - $200
    br
    h2 Hard Drive Size
-   input(type='radio' name='drive' value='0')
-   span 11 Inches - Included
+   input(type='radio' name='drive' value='{"hardDrive" : "128GB", "price" : 0}')
+   span 128GB - Included
    br
-   input(type='radio' name='drive' value='200')
-   span 15 Inches - $200
+   input(type='radio' name='drive' value='{"hardDrive" : "256GB", "price" : 200}')
+   span 256GB - $200
    br
-   h2 Hard Drive Size
+   h2 Memory Size
+   input(type='radio' name='memory' value='{"memory" : "8GB", "price" : 0}')
+   span 8GB - Included
+   br
+   input(type='radio' name='memory' value='{"memory" : "16GB", "price" : 200}')
+   span 16GB - $200
+   br
+
 
