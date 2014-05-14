@@ -2,8 +2,8 @@
 var price = 1000;
 var screen = drive = memory = {"price" : 0};
 screen.screen = "11 Inches";
-memory.memory = "16GB";
-drive.hardDrive = "256GB";
+memory.memory = "8GB";
+drive.hardDrive = "128GB";
 
 $(document).ready(function(){
 
@@ -32,8 +32,13 @@ $(document).ready(function(){
 		url += "&screen=" + screen.screen;
 		url += "&drive=" + drive.hardDrive;
 		url += "&memory=" + memory.memory;
-		alert(url);
-		//$.get(url);
+		$.get(url);
+		window.location.href = "http://localhost:3000";
+		alert("Quote Added");
+	});
+
+	$('#viewQuotes').click(function(){
+		window.location.href = "http://localhost:3000/viewQuotes";
 	});			
 
 });

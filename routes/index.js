@@ -23,6 +23,9 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/viewQuotes', function(req, res){
+  res.render('view');
+});
 
 router.get('/saveQuote', function(req, res) {
 	//Save quote to the database
@@ -32,15 +35,19 @@ router.get('/saveQuote', function(req, res) {
 	o.drive = req.query.drive;
 	o.memory = req.query.memory;
 
+	console.log(o);
+	console.log("Check your database!");
+
 	var quote = new QuoteModel(o);
 	quote.save(function(err){
 		if(err) return console.error(err);
 	});
+
 });
 
 router.get('/loadQuotes', function(req, res) {
 	QuoteModel.find().lean().exec(function (err, results) {
-		res.send();
+		res.send(results);
 	});
 });
 
