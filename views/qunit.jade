@@ -2,13 +2,18 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/qunit.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='lib/jquery.js')
     script(src='lib/myCode.js')
+    script(src='lib/qunit.js')
+    script(src='lib/test.js')
   body
    h1 IS373 Final Exam
    br
    br
+   #qunit
+   #qunit-fixture
    p Please customize your purchase.
    span#laptopPrice $1000
    br

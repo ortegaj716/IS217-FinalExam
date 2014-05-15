@@ -51,4 +51,8 @@ router.get('/loadQuotes', function(req, res) {
 	});
 });
 
+router.get('/qunit', function(req, res) {
+	res.render('qunit');
+});
+
 module.exports = router;

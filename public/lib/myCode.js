@@ -7,6 +7,7 @@ drive.hardDrive = "128GB";
 
 $(document).ready(function(){
 
+	/*
 	$('input[name="drive"]').click(function(){
 		var p = $('input[name="drive"]:checked').val();
 		drive = jQuery.parseJSON(p);
@@ -24,6 +25,46 @@ $(document).ready(function(){
 		memory = jQuery.parseJSON(p);
 		updatePrice();
 	});
+	*/
+
+	//I don't like it this way, but at least it works with unit testing better this way...
+
+	$('#screen0').click(function(){
+		var p = $('#screen0').val();
+		screen = jQuery.parseJSON(p);
+		updatePrice();
+	});
+
+	$('#screen1').click(function(){
+		var p = $('#screen1').val();
+		screen = jQuery.parseJSON(p);
+		updatePrice();
+	});
+
+	$('#drive0').click(function(){
+		var p = $('#drive0').val();
+		drive = jQuery.parseJSON(p);
+		updatePrice();
+	});
+
+	$('#drive1').click(function(){
+		var p = $('#drive1').val();
+		drive = jQuery.parseJSON(p);
+		updatePrice();
+	});
+
+	$('#memory0').click(function(){
+		var p = $('#memory0').val();
+		memory = jQuery.parseJSON(p);
+		updatePrice();
+	});
+
+	$('#memory1').click(function(){
+		var p = $('#memory1').val();
+		memory = jQuery.parseJSON(p);
+		updatePrice();
+	});
+
 
 	$('#saveQuote').click(function(){
 	//	$.getJSON("http://localhost:3000/saveQuery", function(data
@@ -39,7 +80,9 @@ $(document).ready(function(){
 
 	$('#viewQuotes').click(function(){
 		window.location.href = "http://localhost:3000/viewQuotes";
-	});			
+	});	
+
+	//$("#drive1").trigger("click");		
 
 });
 

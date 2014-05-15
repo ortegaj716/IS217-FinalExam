@@ -27,6 +27,7 @@ app.use('/saveQuote', routes);
 app.use('/loadQuotes', routes);
 app.use('/viewQuotes', routes);
 app.use('/users', users);
+app.use('/qunit', routes);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
